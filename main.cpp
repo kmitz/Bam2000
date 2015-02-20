@@ -36,8 +36,8 @@ int main(int argc, char** argv)
     if ( pRenderer )
     {
         //SDL_Surface* pSprite = SDL_LoadBMP("allo.bmp");
-        SDL_Surface *pSprite = IMG_Load ( "allo.png" );
-        SDL_Surface *pSprite2 = IMG_Load ( "allo.png" );
+        SDL_Surface *pSprite = IMG_Load ( "allo.bmp" );
+        SDL_Surface *pSprite2 = IMG_Load ( "allo.jpg" );
         if ( pSprite )
         {
             SDL_Texture* pTexture = SDL_CreateTextureFromSurface(pRenderer,pSprite); // Préparation du sprite
