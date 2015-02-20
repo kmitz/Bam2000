@@ -14,12 +14,19 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="../Program Files (x86)/CodeBlocks/SDL2-2.0.3/i686-w64-mingw32/include" />
+					<Add directory="../Program Files (x86)/CodeBlocks/SDL2_image-2.0.0/i686-w64-mingw32/include" />
 				</Compiler>
 				<Linker>
+					<Add option="-lmingw32" />
+					<Add option="-lSDL2main" />
+					<Add option="-lSDL2" />
 					<Add library="..\Program Files (x86)\CodeBlocks\MinGW\lib\libmingw32.a" />
 					<Add library="..\Program Files (x86)\CodeBlocks\SDL2-2.0.3\i686-w64-mingw32\lib\libSDL2main.a" />
 					<Add library="..\Program Files (x86)\CodeBlocks\SDL2-2.0.3\i686-w64-mingw32\lib\libSDL2.dll.a" />
+					<Add library="..\Program Files (x86)\CodeBlocks\SDL2_image-2.0.0\i686-w64-mingw32\lib\libSDL2_image.dll.a" />
+					<Add library="..\Program Files (x86)\CodeBlocks\SDL2_image-2.0.0\i686-w64-mingw32\lib\libSDL2_image.a" />
 					<Add directory="../Program Files (x86)/CodeBlocks/SDL2-2.0.3/i686-w64-mingw32/lib" />
+					<Add directory="../Program Files (x86)/CodeBlocks/SDL2_image-2.0.0/i686-w64-mingw32/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
