@@ -1,6 +1,9 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include <stdio.h>
+
+using namespace std;
 
 int main(int argc, char** argv)
 {
@@ -11,25 +14,52 @@ int main(int argc, char** argv)
         return -1;
     }
 
+    IMG_Init(IMG_INIT_JPG);
+
+    /* Création de la fenêtre */
+    SDL_Window* pWindow = NULL;
+    pWindow = SDL_CreateWindow("Ma première application SDL2",SDL_WINDOWPOS_UNDEFINED,
+                                                              SDL_WINDOWPOS_UNDEFINED,
+                                                              640,
+                                                              480,
+                                                              SDL_WINDOW_SHOWN);
+
+
+    SDL_Renderer *pRenderer = SDL_CreateRenderer(pWindow,-1,SDL_RENDERER_ACCELERATED); // Création d'un SDL_Renderer utilisant l'accélération matérielle
+    if ( pRenderer )
     {
-        /* Création de la fenêtre */
-        SDL_Window* pWindow = NULL;
-        pWindow = SDL_CreateWindow("Ma première application SDL2",SDL_WINDOWPOS_UNDEFINED,
-                                                                  SDL_WINDOWPOS_UNDEFINED,
-                                                                  640,
-                                                                  480,
-                                                                  SDL_WINDOW_SHOWN);
-
-        if( pWindow )
+        //SDL_Surface* pSprite = SDL_LoadBMP("allo.bmp");
+        SDL_Surface *pSprite = IMG_Load ( "allo.png" );
+        if ( pSprite )
         {
-            SDL_Delay(3000); /* Attendre trois secondes, que l'utilisateur voit la fenêtre */
+            SDL_Texture* pTexture = SDL_CreateTextureFromSurface(pRenderer,pSprite); // Préparation du sprite
+            if ( pTexture )
+            {
+                SDL_Rect dest = { 640/2 - pSprite->w/2,480/2 - pSprite->h/2, pSprite->w, pSprite->h};
+                SDL_RenderCopy(pRenderer,pTexture,NULL,&dest); // Copie du sprite grâce au SDL_Renderer
 
-            SDL_DestroyWindow(pWindow);
+                SDL_RenderPresent(pRenderer); // Affichage
+                SDL_Delay(3000); /* Attendre trois secondes, que l'utilisateur voit la fenêtre */
+
+                SDL_DestroyTexture(pTexture); // Libération de la mémoire associée à la texture
+            }
+            else
+            {
+                fprintf(stdout,"Échec de création de la texture (%s)\n",SDL_GetError());
+            }
+
+            SDL_FreeSurface(pSprite); // Libération de la ressource occupée par le sprite
         }
         else
         {
-            fprintf(stderr,"Erreur de création de la fenêtre: %s\n",SDL_GetError());
+            fprintf(stdout,"Échec de chargement du sprite (%s)\n",SDL_GetError());
         }
+
+        SDL_DestroyRenderer(pRenderer); // Libération de la mémoire du SDL_Renderer
+    }
+    else
+    {
+        fprintf(stdout,"Échec de création du renderer (%s)\n",SDL_GetError());
     }
 
     SDL_Quit();
