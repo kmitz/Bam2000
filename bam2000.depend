@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1424463302 source:c:\bam2000\main.cpp
+1424533894 source:c:\bam2000\main.cpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	<Cat.h>
@@ -338,9 +338,9 @@
 	<SDL2/SDL.h>
 	<Const.h>
 
-1424463315 c:\bam2000\\const.h
+1424533894 c:\bam2000\\const.h
 
-1424462252 c:\bam2000\\cat.h
+1424533894 c:\bam2000\\cat.h
 	<SDL2/SDL.h>
 	<Const.h>
 
@@ -351,7 +351,7 @@
 	<SDL2/SDL.h>
 	<Const.h>
 
-1424459609 c:\bam2000\\timer.h
+1424533894 c:\bam2000\\timer.h
 	<SDL2/SDL.h>
 	<Const.h>
 

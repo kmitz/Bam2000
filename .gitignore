@@ -5,3 +5,5 @@ bam2000.layout
 *.exe
 *.exe
 obj/Debug/main.o
+*.exe
+bam2000.depend
