@@ -5,8 +5,12 @@
 #include <Const.h>
 
 #include <stdio.h>
+<<<<<<< HEAD
 #include <iostream>
 
+=======
+//
+>>>>>>> origin/master
 using namespace std;
 
 int main(int argc, char** argv)

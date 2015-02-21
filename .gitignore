@@ -3,3 +3,5 @@ bam2000.layout
 *.exe
 *.o
 *.exe
+*.exe
+obj/Debug/main.o
