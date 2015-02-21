@@ -1,8 +1,12 @@
 # depslib dependency file v1.0
-1424446207 source:c:\bam2000\main.cpp
+1424463302 source:c:\bam2000\main.cpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
+	<Cat.h>
+	<Timer.h>
+	<Const.h>
 	<stdio.h>
+	<iostream>
 
 1394937196 c:\program files (x86)\codeblocks\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -326,4 +330,28 @@
 	"SDL2/SDL_version.h"
 	"SDL2/begin_code.h"
 	"SDL2/close_code.h"
+
+1424462137 source:c:\bam2000\cat.cpp
+	"Cat.h"
+
+1424462252 c:\bam2000\cat.h
+	<SDL2/SDL.h>
+	<Const.h>
+
+1424463315 c:\bam2000\\const.h
+
+1424462252 c:\bam2000\\cat.h
+	<SDL2/SDL.h>
+	<Const.h>
+
+1424459598 source:c:\bam2000\timer.cpp
+	"Timer.h"
+
+1424459609 c:\bam2000\timer.h
+	<SDL2/SDL.h>
+	<Const.h>
+
+1424459609 c:\bam2000\\timer.h
+	<SDL2/SDL.h>
+	<Const.h>
 

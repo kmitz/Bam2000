@@ -1,3 +1,5 @@
 bam2000.layout
 *.layout
 *.exe
+*.o
+*.exe

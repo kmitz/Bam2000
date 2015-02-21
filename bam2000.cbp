@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="../Program Files (x86)/CodeBlocks/SDL2-2.0.3/i686-w64-mingw32/include" />
 					<Add directory="../Program Files (x86)/CodeBlocks/SDL2_image-2.0.0/i686-w64-mingw32/include" />
+					<Add directory="C:/bam2000/" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32" />
@@ -45,6 +46,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Cat.cpp" />
+		<Unit filename="Cat.h" />
+		<Unit filename="Const.h" />
+		<Unit filename="Timer.cpp" />
+		<Unit filename="Timer.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
